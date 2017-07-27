@@ -23,7 +23,7 @@ class postsPhotosController extends Controller
   }
 
   public function  insert(Request $request){
-    $this->validate($request,['img_dir'=>'required','name' => 'required','post_id' => 'required']);
+    $this->validate($request,['img_dir'=>'required','name' => 'required']);
     $photoData=$request->all();
     Photos::create($photoData);
     Session::flash('success_msg','Photo added Successfully');
