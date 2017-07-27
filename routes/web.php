@@ -28,3 +28,8 @@ Route::post('/photos/insert','postsPhotosController@insert')->name('photos.inser
 Route::get('/photos/edit/{id}','postsPhotosController@edit')->name('photos.edit');
 Route::post('/photos/update/{id}','postsPhotosController@update')->name('photos.update');
 Route::get('/photos/delete/{id}','postsPhotosController@delete')->name('photos.delete');
+
+Route::get('/announcements','anouncementController@index')->name('announcements.index');
+Route::get('/announcements/add', 'anouncementController@add')->name('announcements.add');
+Route::post('/announcements/insert','anouncementController@insert')->name('announcements.insert');
+Route::get('/announcements/delete/{id}','anouncementController@delete')->name('announcements.delete');
