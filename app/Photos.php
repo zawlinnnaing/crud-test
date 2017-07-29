@@ -11,11 +11,11 @@ class Photos extends Model
     //table_name;
     protected $table="tbl_posts_photos";
     //fillable fields
-    protected $fillable=['img_dir','name'];
+    protected $fillable=['img_dir','name','post_id'];
 
-  /*  public function posts_phots()
+    public function posts()
     {
-        return $this->belongTo('App\Post');
-    }*/
+        return $this->belongsTo('App\Post');
+    }
 
 }

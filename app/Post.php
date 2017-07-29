@@ -13,7 +13,7 @@ class Post extends Model
     const CREATED='created';
     const UPDATED_AT='active';
 
-  /*  public function photos(){
+   public function photos(){
       return $this->hasMany('App\Photos','post_id');
-    }*/
+    }
 }

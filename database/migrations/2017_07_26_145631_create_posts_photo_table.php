@@ -20,14 +20,13 @@ class CreatePostsPhotoTable extends Migration
             $table->string('name',256);
         });
         Schema::table('tbl_posts_photos',function(Blueprint $table){
-          $table->foreign('post_id')->references('id')->on('posts');
+          $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
+     * rn void
      */
     public function down()
     {

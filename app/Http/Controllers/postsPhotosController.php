@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
 use App\Photos;
+use App\Post;
 
 class postsPhotosController extends Controller
 {
@@ -23,9 +24,10 @@ class postsPhotosController extends Controller
   }
 
   public function  insert(Request $request){
-    $this->validate($request,['img_dir'=>'required','name' => 'required']);
-    $photoData=$request->all();
-    Photos::create($photoData);
+    $this->validate($request,['img_dir'=>'required','name' => 'required','post_id' => 'required']);
+   $photoData=$request->all();
+
+   Photos::create($photoData);
     Session::flash('success_msg','Photo added Successfully');
     return redirect()->route('photos.index');
   }

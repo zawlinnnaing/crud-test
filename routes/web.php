@@ -24,7 +24,7 @@ Route::get('/posts/delete/{id}','postsController@delete')->name('posts.delete');
 Route::get('/photos','postsPhotosController@index')->name('photos.index');
 Route::get('/photos/details/{id}','postsPhotosController@details')->name('photos.details');
 Route::get('/photos/add', 'postsPhotosController@add')->name('photos.add');
-Route::post('/photos/insert','postsPhotosController@insert')->name('photos.insert');
+Route::any('/photos/insert','postsPhotosController@insert')->name('photos.insert');
 Route::get('/photos/edit/{id}','postsPhotosController@edit')->name('photos.edit');
 Route::post('/photos/update/{id}','postsPhotosController@update')->name('photos.update');
 Route::get('/photos/delete/{id}','postsPhotosController@delete')->name('photos.delete');

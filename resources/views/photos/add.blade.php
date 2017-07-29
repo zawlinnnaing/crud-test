@@ -29,11 +29,11 @@
                             <textarea name="name" id="name" class="form-control"></textarea>
                         </div>
                     </div>
-                  <!--  <div class="form-group">
+                   <div class="form-group">
                         <label class="control-label col-sm-2" >Associated Post ID</label>
                         <div class="col-sm-10">
                             <input type="text" name="post_id" id="post_id" class="form-control">
-                        </div> -->
+                        </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
