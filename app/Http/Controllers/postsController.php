@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
 use App\Post;
+use App\Photos;
 
 class postsController extends Controller
 {
   public function index(){
     $posts=Post::orderBy('created_at','desc')->get();
-    return view('posts.index',['posts'=> $posts]);
+    $photos=Photos::orderBy('id','desc')->get();
+    return view('index',['posts'=> $posts],['photos' => $photos]);
   }
 
   public function details($id){

@@ -16,7 +16,7 @@ class CreatePostsPhotoTable extends Migration
         Schema::create('tbl_posts_photos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('post_id')->unsigned();
-            $table->string('img_dir',256);
+            $table->string('img_dir',256)->default('serveimage.gif');
             $table->string('name',256);
         });
         Schema::table('tbl_posts_photos',function(Blueprint $table){
