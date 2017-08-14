@@ -10,9 +10,9 @@ use App\Photos;
 class postsController extends Controller
 {
   public function index(){
-    $posts=Post::orderBy('created_at','desc')->get();
-    $photos=Photos::orderBy('id','desc')->get();
-    return view('index',['posts'=> $posts],['photos' => $photos]);
+    $posts=Post::orderBy('created_at','desc')->paginate(8);
+    //$photos=Photos::orderBy('id','desc')->get();
+    return view('index',['posts'=> $posts]);
   }
 
   public function details($id){

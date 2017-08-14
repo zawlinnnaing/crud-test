@@ -33,3 +33,35 @@ Route::get('/announcements','anouncementController@index')->name('announcements.
 Route::get('/announcements/add', 'anouncementController@add')->name('announcements.add');
 Route::post('/announcements/insert','anouncementController@insert')->name('announcements.insert');
 Route::get('/announcements/delete/{id}','anouncementController@delete')->name('announcements.delete');
+
+Route::get('/departments', 'PageController@departments');
+
+Route::get('/about', 'PageController@about');
+
+Route::get('/research', 'PageController@research');
+
+Route::get('/academic', 'PageController@academic');
+
+Route::get('/departments/civil', 'PageController@civil');
+
+Route::get('/departments/mech', 'PageController@mech');
+
+Route::get('/departments/mecha', 'PageController@mecha');
+
+Route::get('/departments/ec', 'PageController@ec');
+
+Route::get('/departments/ep', 'PageController@ep');
+
+Route::get('/departments/ceit', 'PageController@ceit');
+
+Route::get('/departments/che', 'PageController@che');
+
+Route::get('/departments/archi', 'PageController@archi');
+
+Route::get('/departments/ir', 'PageController@ir');
+
+Route::get('/departments/maths', 'PageController@maths');
+
+Route::get('/departments/eng', 'PageController@eng');
+
+Route::get('/departments/myan', 'PageController@myan');
