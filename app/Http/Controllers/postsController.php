@@ -6,13 +6,15 @@ use Session;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Photos;
+use App\Announcement;
 
 class postsController extends Controller
 {
   public function index(){
-    $posts=Post::orderBy('created_at','desc')->paginate(8);
+    $posts=Post::orderBy('created_at','desc')->limit(8)->get();
+    $announcements = Announcement::orderBy('created_at','desc')->first();
     //$photos=Photos::orderBy('id','desc')->get();
-    return view('index',['posts'=> $posts]);
+    return view('index',array('posts' => $posts , 'announcements' => $announcements));
   }
 
   public function details($id){
@@ -52,5 +54,10 @@ class postsController extends Controller
     Post::find($id)->delete();
     Session::flash('success_msg','Post delected successfully');
     return redirect()->route('posts.index');
+  }
+  
+  public function postIndex(){
+    $posts = Post::orderBy('created_at','desc')->get();
+    return view('posts.index',['posts' => $posts]);
   }
 }

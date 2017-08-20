@@ -12,7 +12,7 @@
 */
 
 Route::get('/','postsController@index');
-Route::get('/posts','postsController@index')->name('posts.index');
+Route::get('/posts','postsController@postIndex')->name('posts.index');
 Route::get('/posts/details/{id}','postsController@details')->name('posts.details');
 Route::get('/posts/add', 'postsController@add')->name('posts.add');
 Route::post('/posts/insert','postsController@insert')->name('posts.insert');
@@ -65,3 +65,7 @@ Route::get('/departments/maths', 'PageController@maths');
 Route::get('/departments/eng', 'PageController@eng');
 
 Route::get('/departments/myan', 'PageController@myan');
+
+Route::get('/previous_announcements','PageController@previousAnnouncements');
+
+Route::get('/postList','PageController@postList');

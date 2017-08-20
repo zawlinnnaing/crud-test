@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Announcement;
+use App\Post;
 
 class PageController extends Controller
 {
@@ -79,5 +81,17 @@ class PageController extends Controller
      public function myan()
     {
             return view('departments.myan');
+    }
+
+    public function previousAnnouncements(){
+        $announcements = Announcement::orderBy('created_at','desc')->get();
+        return view('previous_announcements',['announcements' => $announcements]);
+    }
+
+    public function postList(){
+        $posts = Post:: orderBy('created_at' , 'desc')->simplePaginate(4);
+        $pageCount = $posts->count();
+        $posts->withPath('postList');
+        return view('postList' , array('posts' => $posts , 'pageCount' => $pageCount));
     }
 }
