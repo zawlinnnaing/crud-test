@@ -26,7 +26,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" >Content</label>
                         <div class="col-sm-10">
-                            <textarea name="content" id="content" class="form-control"></textarea>
+                            <pre name="content" id="content" class="form-control"></pre>
                         </div>
                     </div>
                     <div class="form-group">

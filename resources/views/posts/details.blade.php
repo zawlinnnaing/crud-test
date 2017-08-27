@@ -54,7 +54,7 @@
     </figure>
     <article class="message">
         <div class="message-body">
-            {{ $post->content }}
+            <pre>{{ $post->content }}<pre>
         </div>
     </article>
 
