@@ -426,6 +426,9 @@ a img{
 .footer {
   background-color: #fafafa;
   position: relative;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
 }
 
   .footer a:hover {
@@ -544,4 +547,8 @@ a img{
   .footer .mdl-mega-footer--bottom-section {
     display: none;
   }
+}
+
+.details {
+  margin-top: 3rem !important;
 }

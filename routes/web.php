@@ -68,4 +68,4 @@ Route::get('/departments/myan', 'PageController@myan');
 
 Route::get('/previous_announcements','PageController@previousAnnouncements');
 
-Route::get('/postList','PageController@postList');
+Route::get('/postList','PageController@postList')->name('post_list');

@@ -28,7 +28,7 @@
      		text-overflow: ellipsis;">
      			{{$post->content}}
      		</p>
-     	<a href=""> See more</a>
+     	<a href="{{route('posts.details', $post->id)}}"> See more</a>
       <small>{{$post->created_at}}</small>
     </div>
     </div>
@@ -37,7 +37,7 @@
 @endforeach
 
 <div class="pageinate_links" style="display: inline; text-align: center;">
-@for($i=1 ; $i <= $pageCount; $i++)
+@for($i=1 ; $i < $pageCount; $i++)
 <a href="postList?page={{$i}}" style="margin: auto;">{{$i}}</a>
 @endfor
 </div>

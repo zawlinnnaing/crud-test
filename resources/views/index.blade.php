@@ -63,7 +63,7 @@
                 <span class="mdl-typography--font-light mdl-typography--subhead">{{$post->content}}</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+                 <a class="link mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{ route('posts.details' , $post->id) }}">
                    Make the switch
                    <i class="material-icons">chevron_right</i>
                  </a>
@@ -124,7 +124,7 @@
                  </a>
               </div>
             </div> -->
-
+          <a href="{{ route ('post_list') }}"> See more posts</a>
           </div>
         </div>
             @endsection
